@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            color: #e50914;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .hero {
+            height: 80vh;
+            background-image: url('https://source.unsplash.com/random/1600x900');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #e50914;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .row {
+            padding: 20px 50px;
+        }
+        .row h2 {
+            margin-bottom: 10px;
+        }
+        .thumbnails {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+        .thumbnail {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 120px;
+            background-color: #333;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">NETFLIX</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">New & Popular</a>
+            <a href="#">My List</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Netflix</h1>
+            <p>Watch unlimited TV shows and movies.</p>
+            <a href="#" class="btn">Watch Now</a>
+        </div>
+    </section>
+
+    <section class="row">
+        <h2>Popular on Netflix</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,5')"></div>
+        </div>
+    </section>
+
+    <section class="row">
+        <h2>Trending Now</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,5')"></div>
+        </div>
+    </section>
+
+    <section class="row">
+        <h2>Watch It Again</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,5')"></div>
+        </div>
+    </section>
+</body>
+</html>

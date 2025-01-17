@@ -98,33 +98,34 @@
             color: #e50914;
             text-decoration: none;
         }
-        .sidebar-ads {
+       .sidebar-ads {
     position: fixed;
-    top: 100px;
+    top: 100px; /* Position par défaut pour les grands écrans */
     right: 0;
-    width: 200px; /* Ancienne largeur fixe */
-    max-width: 80vw; /* Largeur maximale à 80% de la largeur de l'écran */
+    width: 200px; /* Largeur de la barre des pubs */
+    max-width: 90%; /* Largeur maximale de 90% de l'écran */
     background-color: #202020;
     border-left: 2px solid #e50914;
     padding: 10px;
     color: white;
     z-index: 1000;
-    height: auto; /* Ajuster la hauteur en fonction du contenu */
+    height: auto; /* Hauteur ajustée automatiquement */
 }
 
 @media (max-width: 768px) {
     .sidebar-ads {
-        width: 80vw; /* Pour les écrans de taille moyenne ou petite, occuper 80% de la largeur */
-        top: 50px; /* Positionner plus haut pour les petits écrans */
+        width: 80%; /* Pour les écrans de taille moyenne, utiliser 80% de la largeur */
+        top: 50px; /* Remonter la barre des pubs plus haut sur les petits écrans */
     }
 }
 
 @media (max-width: 480px) {
     .sidebar-ads {
-        width: 90vw; /* Pour les écrans encore plus petits (smartphones) occuper 90% de la largeur */
-        top: 10px; /* Placer plus haut sur les très petits écrans */
+        width: 90%; /* Pour les petits écrans comme les téléphones, utiliser 90% */
+        top: 20px; /* Remonter encore plus haut sur les très petits écrans */
     }
 }
+
         }
         .sidebar-ads .ad {
             margin-bottom: 10px;

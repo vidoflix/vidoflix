@@ -99,15 +99,32 @@
             text-decoration: none;
         }
         .sidebar-ads {
-            position: fixed;
-            top: 100px;
-            right: 0;
-            width: 200px;
-            background-color: #202020;
-            border-left: 2px solid #e50914;
-            padding: 10px;
-            color: white;
-            z-index: 1000;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 300px; /* Ancienne largeur fixe */
+    max-width: 80vw; /* Largeur maximale à 80% de la largeur de l'écran */
+    background-color: #202020;
+    border-left: 2px solid #e50914;
+    padding: 10px;
+    color: white;
+    z-index: 1000;
+    height: auto; /* Ajuster la hauteur en fonction du contenu */
+}
+
+@media (max-width: 768px) {
+    .sidebar-ads {
+        width: 80vw; /* Pour les écrans de taille moyenne ou petite, occuper 80% de la largeur */
+        top: 50px; /* Positionner plus haut pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-ads {
+        width: 90vw; /* Pour les écrans encore plus petits (smartphones) occuper 90% de la largeur */
+        top: 10px; /* Placer plus haut sur les très petits écrans */
+    }
+}
         }
         .sidebar-ads .ad {
             margin-bottom: 10px;

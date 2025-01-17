@@ -34,6 +34,7 @@
         }
         .logo img {
             height: 35px;
+            display: block;
         }
         .nav a {
             color: white;
@@ -67,6 +68,7 @@
         }
         .row {
             padding: 20px 50px;
+            margin-bottom: 40px;
         }
         .row h2 {
             margin-bottom: 10px;
@@ -83,6 +85,7 @@
             background-color: #333;
             background-size: cover;
             background-position: center;
+            border-radius: 5px;
         }
         .credits {
             background-color: #141414;
@@ -95,69 +98,41 @@
             color: #e50914;
             text-decoration: none;
         }
-        .tiktok-btn {
-            width: 60px;
-            height: 60px;
-            display: inline-block;
-            background-image: url('https://static.vecteezy.com/system/resources/previews/023/741/129/original/tiktok-logo-icon-social-media-icon-free-png.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            margin-top: 10px;
-            transition: transform 0.3s;
-        }
-        .tiktok-btn:hover {
-            transform: scale(1.1);
-        }
-        /* Bande latérale */
-        .sidebar {
+        .sidebar-ads {
             position: fixed;
-            top: 0;
+            top: 100px;
             right: 0;
-            width: 250px;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            overflow-y: auto;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-        .sidebar.hidden {
-            transform: translateX(100%);
-        }
-        .sidebar h2 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        .ad {
-            background-color: #333;
-            margin-bottom: 20px;
+            width: 300px;
+            background-color: #202020;
+            border-left: 2px solid #e50914;
             padding: 10px;
+            color: white;
+            z-index: 1000;
+        }
+        .sidebar-ads .ad {
+            margin-bottom: 10px;
+            background-color: #333;
             border-radius: 5px;
+            padding: 10px;
             text-align: center;
         }
-        .ad img {
+        .sidebar-ads .ad img {
             max-width: 100%;
             border-radius: 5px;
         }
-        .ad p {
-            margin-top: 10px;
-        }
-        .close-btn {
+        .close-ads {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5em;
+            top: 5px;
+            right: 5px;
+            background-color: #e50914;
             color: white;
-            background: none;
             border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
             cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .close-btn:hover {
-            transform: scale(1.2);
+            text-align: center;
+            line-height: 25px;
         }
     </style>
 </head>
@@ -183,45 +158,88 @@
         </div>
     </section>
 
+    <!-- Popular Section -->
     <section id="popular" class="row">
         <h2>Popular on Vidoflix</h2>
         <div class="thumbnails">
-            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/Bn9tccpH/Marre-de-votre-musique-Plus-de-3000-artistes-en-vinyle-d-couvrir-en-magasin-6.png')"></div>
-            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/s22K4kLX/Marre-de-votre-musique-Plus-de-3000-artistes-en-vinyle-d-couvrir-en-magasin-7.png')"></div>
-            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/7hNwB3Tq/Marre-de-votre-musique-Plus-de-3000-artistes-en-vinyle-d-couvrir-en-magasin-8.png')"></div>
-            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/rs75RsB5/Marre-de-votre-musique-Plus-de-3000-artistes-en-vinyle-d-couvrir-en-magasin-9.png')"></div>
-            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/vmZnhTGj/Marre-de-votre-musique-Plus-de-3000-artistes-en-vinyle-d-couvrir-en-magasin-10.png')"></div>
+            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/Bn9tccpH/image1.png')"></div>
+            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/s22K4kLX/image2.png')"></div>
+            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/7hNwB3Tq/image3.png')"></div>
+            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/rs75RsB5/image4.png')"></div>
+            <div class="thumbnail" style="background-image: url('https://i.postimg.cc/vmZnhTGj/image5.png')"></div>
         </div>
     </section>
 
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" id="closeSidebar">&times;</button>
-        <h2>Publicités</h2>
+    <!-- Trending Section -->
+    <section class="row">
+        <h2>Trending Now</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,5')"></div>
+        </div>
+    </section>
+
+    <!-- Watch It Again Section -->
+    <section class="row">
+        <h2>Watch It Again</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,5')"></div>
+        </div>
+    </section>
+
+    <!-- New Releases Section -->
+    <section class="row">
+        <h2>New Releases</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?movie,5')"></div>
+        </div>
+    </section>
+
+    <!-- Top Picks Section -->
+    <section class="row">
+        <h2>Top Picks for You</h2>
+        <div class="thumbnails">
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?top,1')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?top,2')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?top,3')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?top,4')"></div>
+            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?top,5')"></div>
+        </div>
+    </section>
+
+    <!-- Sidebar Ads -->
+    <div class="sidebar-ads" id="sidebarAds">
+        <button class="close-ads" onclick="document.getElementById('sidebarAds').style.display='none'">&times;</button>
         <div class="ad">
-            <img src="https://via.placeholder.com/200x120?text=Pub+1" alt="Ad 1">
-            <p>Faite pour Vidoflix !</p>
+            <img src="https://via.placeholder.com/300x150?text=Your+Ad+Here" alt="Ad 1">
         </div>
         <div class="ad">
-            <img src="https://via.placeholder.com/200x120?text=Pub+2" alt="Ad 2">
-            <p>Publicité de test</p>
+            <img src="https://via.placeholder.com/300x150?text=Another+Ad+Here" alt="Ad 2">
         </div>
-        <div class="ad">
-            <img src="https://via.placeholder.com/200x120?text=Pub+3" alt="Ad 3">
-            <p>À personnaliser !</p>
-        </div>
+    </div>
+
+    <div class="credits">
+        <p>Vidoflix - All Rights Reserved &copy; 2025</p>
+        <a href="https://www.tiktok.com/@vidoflix.off" target="_blank">
+            <div class="tiktok-btn"></div>
+        </a>
     </div>
 
     <script>
         document.getElementById('scrollToPopular').addEventListener('click', function () {
             const popularSection = document.getElementById('popular');
             popularSection.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        const sidebar = document.getElementById('sidebar');
-        const closeSidebarBtn = document.getElementById('closeSidebar');
-
-        closeSidebarBtn.addEventListener('click', () => {
-            sidebar.classList.add('hidden');
         });
     </script>
 </body>

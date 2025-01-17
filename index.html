@@ -66,6 +66,29 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        /* Bande de publicités */
+        .ads-banner {
+            background-color: #222;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+            gap: 15px;
+        }
+        .ad {
+            width: 300px;
+            height: 150px;
+            background-color: #333;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .ad:hover {
+            transform: scale(1.05);
+        }
         .row {
             padding: 20px 50px;
         }
@@ -135,6 +158,14 @@
             <button id="scrollToPopular" class="btn">Watch Now</button>
         </div>
     </section>
+
+    <!-- Bande de publicités -->
+    <div class="ads-banner">
+        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad1');"></div>
+        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad2');"></div>
+        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad3');"></div>
+        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad4');"></div>
+    </div>
 
     <section id="popular" class="row">
         <h2>Popular on Vidoflix</h2>

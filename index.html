@@ -23,7 +23,7 @@
             padding: 0;
             background-color: #141414;
             color: white;
-            scroll-behavior: smooth; /* Permet une animation fluide */
+            scroll-behavior: smooth;
         }
         .header {
             display: flex;
@@ -33,14 +33,13 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
         .logo img {
-            height: 35px; /* Augmente la hauteur du logo */
-            display: block;
+            height: 35px;
         }
         .nav a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
-            font-size: 1.2em; /* Ajuste la taille du texte */
+            font-size: 1.2em;
         }
         .hero {
             height: 80vh;
@@ -66,29 +65,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        /* Bande de publicités */
-        .ads-banner {
-            background-color: #222;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: auto;
-            gap: 15px;
-        }
-        .ad {
-            width: 300px;
-            height: 150px;
-            background-color: #333;
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .ad:hover {
-            transform: scale(1.05);
-        }
         .row {
             padding: 20px 50px;
         }
@@ -108,7 +84,6 @@
             background-size: cover;
             background-position: center;
         }
-        /* Section des crédits */
         .credits {
             background-color: #141414;
             color: white;
@@ -120,7 +95,6 @@
             color: #e50914;
             text-decoration: none;
         }
-        /* Style du bouton TikTok avec image */
         .tiktok-btn {
             width: 60px;
             height: 60px;
@@ -134,6 +108,38 @@
         }
         .tiktok-btn:hover {
             transform: scale(1.1);
+        }
+        /* Bande latérale */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            overflow-y: auto;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .ad {
+            background-color: #333;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .ad img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .ad p {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -159,14 +165,6 @@
         </div>
     </section>
 
-    <!-- Bande de publicités -->
-    <div class="ads-banner">
-        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad1');"></div>
-        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad2');"></div>
-        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad3');"></div>
-        <div class="ad" style="background-image: url('https://source.unsplash.com/random/300x150?ad4');"></div>
-    </div>
-
     <section id="popular" class="row">
         <h2>Popular on Vidoflix</h2>
         <div class="thumbnails">
@@ -178,38 +176,23 @@
         </div>
     </section>
 
-    <section class="row">
-        <h2>Trending Now</h2>
-        <div class="thumbnails">
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,1')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,2')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,3')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,4')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?tv,5')"></div>
+    <div class="sidebar">
+        <h2>Publicités</h2>
+        <div class="ad">
+            <img src="https://via.placeholder.com/200x120?text=Pub+1" alt="Ad 1">
+            <p>Faite pour Vidoflix !</p>
         </div>
-    </section>
-
-    <section class="row">
-        <h2>Watch It Again</h2>
-        <div class="thumbnails">
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,1')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,2')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,3')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,4')"></div>
-            <div class="thumbnail" style="background-image: url('https://source.unsplash.com/random/200x120?cinema,5')"></div>
+        <div class="ad">
+            <img src="https://via.placeholder.com/200x120?text=Pub+2" alt="Ad 2">
+            <p>Publicité de test</p>
         </div>
-    </section>
-
-    <!-- Section des crédits -->
-    <div class="credits">
-        <p>Vidoflix - All Rights Reserved &copy; 2025</p>
-        <a href="https://www.tiktok.com/@vidoflix.off" target="_blank">
-            <div class="tiktok-btn"></div>
-        </a>
+        <div class="ad">
+            <img src="https://via.placeholder.com/200x120?text=Pub+3" alt="Ad 3">
+            <p>À personnaliser !</p>
+        </div>
     </div>
 
     <script>
-        // Ajout d'une animation au clic
         document.getElementById('scrollToPopular').addEventListener('click', function () {
             const popularSection = document.getElementById('popular');
             popularSection.scrollIntoView({ behavior: 'smooth' });
@@ -217,6 +200,7 @@
     </script>
 </body>
 </html>
+
 <!--
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                            Vidoflix - All Rights Reserved - 2025

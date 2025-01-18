@@ -103,44 +103,49 @@
             color: #e50914;
             text-decoration: none;
         }
-       .sidebar-ads {
-            position: fixed;
-            top: 100px;
-            right: 0;
-            width: 200px;
-            max-width: 90%;
-            background-color: #202020;
-            border-left: 2px solid #e50914;
-            padding: 10px;
-            color: white;
-            z-index: 1000;
-            height: auto;
-        }
+      .sidebar-ads {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    max-width: 90%;
+    background-color: #202020;
+    border-left: 2px solid #e50914;
+    padding: 10px;
+    color: white;
+    z-index: 1000;
+    height: auto;
+    /* Adjust for smaller screens */
+    @media (max-width: 768px) {
+        width: 150px;
+        top: 50px;
+    }
+    @media (max-width: 480px) {
+        width: 100%;
+        top: 20px;
+        /* Optionally, change layout or hide */
+        display: none; /* Hide ads on very small screens */
+        /* or */
+        /* flex-direction: column; */
+    }
+}
 
-        @media (max-width: 768px) {
-            .sidebar-ads {
-                width: 80%;
-                top: 50px;
-            }
-        }
+.sidebar-ads .ad {
+    margin-bottom: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    @media (max-width: 480px) {
+        width: 100%;
+        /* If you choose to show them stacked */
+    }
+}
 
-        @media (max-width: 480px) {
-            .sidebar-ads {
-                width: 90%;
-                top: 20px;
-            }
-        }
-        .sidebar-ads .ad {
-            margin-bottom: 10px;
-            background-color: #333;
-            border-radius: 5px;
-            padding: 10px;
-            text-align: center;
-        }
-        .sidebar-ads .ad img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
+.sidebar-ads .ad img {
+    max-width: 100%;
+    border-radius: 5px;
+}
         .close-ads {
             position: absolute;
             top: 5px;

@@ -105,40 +105,41 @@
         }
       .sidebar-ads {
     position: fixed;
-    top: 100px;
+    top: 10%;
     right: 0;
-    width: 200px;
+    width: 20%; /* Utilisation de pourcentage pour la largeur */
     max-width: 90%;
     background-color: #202020;
     border-left: 2px solid #e50914;
-    padding: 10px;
+    padding: 1%;
     color: white;
     z-index: 1000;
     height: auto;
-    /* Adjust for smaller screens */
+
     @media (max-width: 768px) {
-        width: 150px;
-        top: 50px;
+        width: 15%; /* Réduit pour les écrans moyens */
+        top: 5%;
     }
+
     @media (max-width: 480px) {
-        width: 100%;
-        top: 20px;
-        /* Optionally, change layout or hide */
-        display: none; /* Hide ads on very small screens */
-        /* or */
+        width: 100%; /* Prend toute la largeur sur très petits écrans */
+        top: 2%;
+        /* Optionnellement, changer la disposition ou masquer */
+        display: none; /* Masquer les publicités sur les très petits écrans */
+        /* ou */
         /* flex-direction: column; */
     }
 }
 
 .sidebar-ads .ad {
-    margin-bottom: 10px;
+    margin-bottom: 2%; /* Utilisation de pourcentage pour la marge */
     background-color: #333;
     border-radius: 5px;
-    padding: 10px;
+    padding: 2%; /* Utilisation de pourcentage pour le padding */
     text-align: center;
+
     @media (max-width: 480px) {
-        width: 100%;
-        /* If you choose to show them stacked */
+        width: 100%; /* Si vous choisissez de les afficher empilées */
     }
 }
 
@@ -146,6 +147,7 @@
     max-width: 100%;
     border-radius: 5px;
 }
+      
         .close-ads {
             position: absolute;
             top: 5px;

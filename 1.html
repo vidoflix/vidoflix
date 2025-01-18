@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Style</title>
+    <title>Vidoflix</title>
     <style>
         body {
             margin: 0;
@@ -113,10 +113,9 @@
             background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
         }
 
-        .logo {
-            color: #e50914;
-            font-size: 24px;
-            font-weight: bold;
+        .logo img {
+            height: 40px; /* Ajustez cette valeur en fonction de la taille souhaitée */
+            object-fit: contain;
         }
 
         .nav-links {
@@ -137,7 +136,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">NETFLIX</div>
+        <!-- Remplacez ici le texte par une image -->
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        </div>
         <div class="nav-links">
             <a href="#" class="nav-link">Accueil</a>
             <a href="#" class="nav-link">Séries</a>
